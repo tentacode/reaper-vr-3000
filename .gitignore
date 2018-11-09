@@ -1,0 +1,11 @@
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+Temp
+Library/ShaderCache/*
+Library/metadata/*
