@@ -14,7 +14,7 @@ public class CharacterSpawner : MonoBehaviour {
         for (int i = 0; i < Nb; i++)
         {
             var c = Instantiate(CharacterPrefab, Planet.transform);
-            c.transform.position = points[i];
+            c.transform.localPosition = points[i];
             c.transform.Rotate(0, Random.Range(0, 360), 0);
 
             var gravityScript = c.GetComponent<Gravity>();

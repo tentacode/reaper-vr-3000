@@ -20,7 +20,7 @@ public class CharacterAI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(Planet != null && (Target == null || (transform.position - Target).Value.magnitude < 0.1f))
+        if(Target == null || (transform.position - Target).Value.magnitude < 0.1f)
         {
             NewTarget();
         }
@@ -57,8 +57,8 @@ public class CharacterAI : MonoBehaviour {
 
     private void Move()
     {
-        Vector3 newPos = transform.position;
-        Vector3 travelDir = (Target.Value - transform.position).normalized;
+        Vector3 newPos = transform.localPosition;
+        Vector3 travelDir = (Target.Value - transform.localPosition).normalized;
 
         //move forward by our speed
         newPos += travelDir * (Time.deltaTime * Speed);
@@ -69,20 +69,23 @@ public class CharacterAI : MonoBehaviour {
 
         //transform.forward = newPos - transform.position;
 
-        Vector3 gravityUp = (transform.position - Planet.transform.position).normalized;
+        Vector3 gravityUp = (transform.localPosition - Vector3.zero).normalized;
         Vector3 localUp = transform.up;
 
-        transform.position = newPos;
+        transform.localPosition = newPos;
     }
 
     private void NewTarget()
     {
-        Target = RandomSpherePoint(
-            Planet.transform.position.x,
-            Planet.transform.position.y,
-            Planet.transform.position.z,
-            Planet.Rayon
-            );
+        if (Planet != null)
+        {
+            Target = RandomSpherePoint(
+                0,
+                0,
+                0,
+                Planet.Rayon
+                );
+        }
 
     }
 
