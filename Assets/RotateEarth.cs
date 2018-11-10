@@ -13,6 +13,11 @@ public class RotateEarth : MonoBehaviour
 	void Start()
 	{
 		rb = GetComponent<Rigidbody> ();
+	}
+
+	public void Rotate()
+	{
+		Debug.Log ("Foo");
 		rb.AddTorque (transform.up * torqueSpeed);
 	}
 
