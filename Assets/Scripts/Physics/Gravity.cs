@@ -55,10 +55,12 @@ public class Gravity : MonoBehaviour {
 
     private void UpdateRay()
     {
-        Debug.Log(_ray);
         _ray.origin = Position.CurrentPosition + transform.up * 0.1f;
         _ray.direction = (Planet.transform.position - Position.CurrentPosition).normalized;
 
-        Debug.DrawRay(_ray.origin, _ray.direction * Planet.Rayon, Color.green, 0.2f);
+        if (Settings.Instance.Debug)
+        {
+            Debug.DrawRay(_ray.origin, _ray.direction * Planet.Rayon, Color.green, 0.2f);
+        }
     }
 }

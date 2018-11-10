@@ -46,7 +46,7 @@ public class CharacterAI : MonoBehaviour {
             Move();
         }
 
-        if (Target != Vector3.zero)
+        if (Target != Vector3.zero && Settings.Instance.Debug)
         {
             Debug.DrawLine(Target + Planet.transform.position, Target + Planet.transform.position + (Target - Vector3.zero).normalized * 0.5f, Color.cyan);
         }
@@ -57,7 +57,10 @@ public class CharacterAI : MonoBehaviour {
         _ray.origin = transform.position + transform.up * 0.1f;
         _ray.direction = transform.forward;
 
-        Debug.DrawRay(_ray.origin, _ray.direction * 0.2f, Color.yellow, Time.deltaTime * 2);
+        if (Settings.Instance.Debug)
+        {
+            Debug.DrawRay(_ray.origin, _ray.direction * 0.2f, Color.yellow, Time.deltaTime * 2);
+        }
     }
 
     private void Move()
