@@ -10,7 +10,6 @@ public class Gravity : MonoBehaviour {
     public Position Position;
 
     private Ray _ray;
-    private Vector3? _previousPosition;
 
     // Use this for initialization
     void Start () {
@@ -24,7 +23,13 @@ public class Gravity : MonoBehaviour {
         if (Planet != null)
         {
             transform.up = -(Planet.transform.position - transform.position).normalized;
-            transform.rotation = Quaternion.LookRotation(-(Position.PreviousPosition - Position.CurrentPosition), transform.up);
+
+            var movement = -(Position.PreviousPosition - Position.CurrentPosition);
+
+            if (movement != Vector3.zero)
+            {
+                transform.rotation = Quaternion.LookRotation(movement, transform.up);
+            }
 
             UpdateRay();
 
@@ -36,8 +41,6 @@ public class Gravity : MonoBehaviour {
                 var hit = hits.OrderBy(h => h.distance).First();
                 transform.position = hit.point;
             }
-
-            _previousPosition = transform.position;
         }
 	}
 
