@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -8,6 +9,8 @@ public class Gravity : MonoBehaviour {
     public Planet Planet;
     public Position Position;
     public int Collisions;
+    public EventHandler OnGrounded;
+    public bool Grounded;
 
     private Ray _ray;
 
@@ -37,6 +40,17 @@ public class Gravity : MonoBehaviour {
                 {
                     Position.UpdatePosition();
                 }
+
+                if(!Grounded && OnGrounded != null)
+                {
+                    OnGrounded.Invoke(this, null);
+                }
+
+                Grounded = true;
+            }
+            else
+            {
+                Grounded = false;
             }
 
             Collisions = hits.Count;
