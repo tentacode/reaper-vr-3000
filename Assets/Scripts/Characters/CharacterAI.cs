@@ -8,7 +8,7 @@ public class CharacterAI : MonoBehaviour {
 
     public float Speed;
     public Planet Planet;
-    public Vector3? Target;
+    public Vector3 Target;
 
     private Ray _ray;
 
@@ -20,7 +20,7 @@ public class CharacterAI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(Target == null || (transform.position - Target).Value.magnitude < 0.1f)
+        if(Target == Vector3.zero || (Target - transform.localPosition).magnitude < Planet.transform.localScale.x / 10f)
         {
             NewTarget();
         }
@@ -45,6 +45,11 @@ public class CharacterAI : MonoBehaviour {
         {
             Move();
         }
+
+        if (Target != Vector3.zero)
+        {
+            Debug.DrawLine(Target + Planet.transform.position, Target + Planet.transform.position + (Target - Vector3.zero).normalized * 0.5f, Color.cyan);
+        }
     }
 
     private void UpdateRay()
@@ -58,7 +63,7 @@ public class CharacterAI : MonoBehaviour {
     private void Move()
     {
         Vector3 newPos = transform.localPosition;
-        Vector3 travelDir = (Target.Value - transform.localPosition).normalized;
+        Vector3 travelDir = (Target - transform.localPosition).normalized;
 
         //move forward by our speed
         newPos += travelDir * (Time.deltaTime * Speed);
