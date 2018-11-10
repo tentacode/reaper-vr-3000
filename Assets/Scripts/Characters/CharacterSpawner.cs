@@ -15,10 +15,13 @@ public class CharacterSpawner : MonoBehaviour {
         {
             var c = Instantiate(CharacterPrefab, Planet.transform);
             c.transform.position = points[i];
-            //c.transform.localScale = new Vector3(c.transform.localScale.x / (Planet.Rayon*2f), c.transform.localScale.y / (Planet.Rayon * 2f), c.transform.localScale.z / (Planet.Rayon * 2f));
+            c.transform.Rotate(0, Random.Range(0, 360), 0);
 
-            var script = c.GetComponent<Gravity>();
-            script.Planet = Planet;
+            var gravityScript = c.GetComponent<Gravity>();
+            gravityScript.Planet = Planet;
+
+            var aiScript = c.GetComponent<CharacterAI>();
+            aiScript.Planet = Planet;
         }
 	}
 	
