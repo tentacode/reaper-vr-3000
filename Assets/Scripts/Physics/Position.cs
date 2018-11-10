@@ -16,6 +16,11 @@ public class Position : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        UpdatePosition();
+    }
+
+    public void UpdatePosition()
+    {
         PreviousPosition = CurrentPosition;
         CurrentPosition = transform.position;
     }
