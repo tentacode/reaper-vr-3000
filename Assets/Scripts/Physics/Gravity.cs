@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-[RequireComponent(typeof(Position))]
 public class Gravity : MonoBehaviour {
 
     public Planet Planet;
     public Position Position;
+    public int Collisions;
 
     private Ray _ray;
 
@@ -24,30 +24,40 @@ public class Gravity : MonoBehaviour {
         {
             transform.up = -(Planet.transform.position - transform.position).normalized;
 
-            var movement = -(Position.PreviousPosition - Position.CurrentPosition);
-
-            if (movement != Vector3.zero)
-            {
-                transform.rotation = Quaternion.LookRotation(movement, transform.up);
-            }
-
             UpdateRay();
 
-            var hits = Physics.RaycastAll(_ray, 1).ToList();
-            hits.RemoveAll(h => h.collider.gameObject.tag != "Planet");
+            var hits = Physics.RaycastAll(_ray, 1, LayerMask.GetMask("Planet")).ToList();
 
             if (hits.Any())
             {
                 var hit = hits.OrderBy(h => h.distance).First();
                 transform.position = hit.point;
+
+                if (Position != null)
+                {
+                    Position.UpdatePosition();
+                }
+            }
+
+            Collisions = hits.Count;
+
+            if (Position != null && Position.PreviousPosition != Position.CurrentPosition)
+            {
+                var movement = -(Position.PreviousPosition - Position.CurrentPosition);
+
+                if (movement != Vector3.zero)
+                {
+                    transform.rotation = Quaternion.LookRotation(movement, transform.up);
+                }
             }
         }
 	}
 
     private void UpdateRay()
     {
-        _ray.origin = transform.position + transform.up * 0.1f;
-        _ray.direction = (Planet.transform.position - transform.position).normalized * Planet.Rayon;
+        Debug.Log(_ray);
+        _ray.origin = Position.CurrentPosition + transform.up * 0.1f;
+        _ray.direction = (Planet.transform.position - Position.CurrentPosition).normalized;
 
         Debug.DrawRay(_ray.origin, _ray.direction * Planet.Rayon, Color.green, 0.2f);
     }

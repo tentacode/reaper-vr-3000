@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4279568179245040}
   - component: {fileID: 33826202695642586}
-  - component: {fileID: 136839267503345994}
   - component: {fileID: 23985955429814182}
   m_Layer: 0
   m_Name: Arm2
@@ -57,7 +56,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4440190173182064}
   - component: {fileID: 33848016617842524}
-  - component: {fileID: 136424698030859794}
   - component: {fileID: 23875450450666804}
   m_Layer: 0
   m_Name: Body
@@ -75,7 +73,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4029564456122688}
   - component: {fileID: 33476344823804420}
-  - component: {fileID: 135365322607993002}
   - component: {fileID: 23121049876687296}
   m_Layer: 0
   m_Name: Head
@@ -93,7 +90,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4480052104187178}
   - component: {fileID: 33326522856254790}
-  - component: {fileID: 136909025693361666}
   - component: {fileID: 23448660183243810}
   m_Layer: 0
   m_Name: Arm
@@ -348,6 +344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Planet: {fileID: 0}
   Position: {fileID: 0}
+  Collisions: 0
 --- !u!114 &114716196156273200
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -383,57 +380,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d22afd15b69696d418504d15e03ebde6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0.1
+  Speed: 0.7
   Planet: {fileID: 0}
   Target: {x: 0, y: 0, z: 0}
---- !u!135 &135365322607993002
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1611532297456814}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136424698030859794
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1503802817289696}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136839267503345994
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1226546952766872}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136909025693361666
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1757253987720464}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
