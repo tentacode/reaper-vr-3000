@@ -6,6 +6,7 @@ using UnityEngine;
 public class CharacterSkin : MonoBehaviour {
 
     public string Key;
+    public MeshRenderer MeshRenderer;
 
     // Use this for initialization
     void Start () {

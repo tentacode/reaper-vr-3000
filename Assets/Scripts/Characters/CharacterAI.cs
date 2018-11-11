@@ -27,7 +27,7 @@ public class CharacterAI : MonoBehaviour {
 
         UpdateRay();
 
-        var hits = Physics.RaycastAll(_ray, 1, LayerMask.GetMask("Obstacle", "Planet")).ToList();
+        var hits = Physics.RaycastAll(_ray, 1, LayerMask.GetMask("Obstacle")).ToList();
         //hits.RemoveAll(h => h.collider.gameObject.tag != "Obstacle" && h.collider.gameObject.tag != "Planet");
 
         if (hits.Any())
@@ -54,7 +54,7 @@ public class CharacterAI : MonoBehaviour {
 
     private void UpdateRay()
     {
-        _ray.origin = transform.position + transform.up * 0.1f;
+        _ray.origin = transform.position + transform.up * 0.05f;
         _ray.direction = transform.forward;
 
         if (Settings.Instance.Debug)
