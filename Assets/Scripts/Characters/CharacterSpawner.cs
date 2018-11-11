@@ -22,6 +22,9 @@ public class CharacterSpawner : MonoBehaviour {
 
             var aiScript = c.GetComponent<CharacterAI>();
             aiScript.Planet = Planet;
+
+            var cScript = c.GetComponent<Character>();
+            cScript.Planet = Planet;
         }
 	}
 	
