@@ -54,7 +54,7 @@ public class CharacterAI : MonoBehaviour {
 
     private void UpdateRay()
     {
-        _ray.origin = transform.position + transform.up * 0.1f;
+        _ray.origin = transform.position + transform.up * 0.05f;
         _ray.direction = transform.forward;
 
         if (Settings.Instance.Debug)
