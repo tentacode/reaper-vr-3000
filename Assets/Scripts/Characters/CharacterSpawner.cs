@@ -16,6 +16,8 @@ public class CharacterSpawner : MonoBehaviour {
     public CharacterColorCollection CharacterColorCollection;
     public Material TeeShirt;
 
+    public FloatVariable AliveCount;
+
     private List<CharacterSkinKey> _skinKeys;
     private List<GameObject> _characters;
 
@@ -61,7 +63,9 @@ public class CharacterSpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(_characters.All(c => c == null))
+        AliveCount.Value = _characters.Count(x => x != null);
+
+        if (_characters.All(c => c == null))
         {
             SceneManager.LoadScene(0);
         }
