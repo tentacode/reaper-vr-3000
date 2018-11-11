@@ -82,7 +82,7 @@ public class RotateEarth : MonoBehaviour
 	void UpdateRay(GameObject obj)
 	{
 		ray.origin = obj.transform.position;
-		ray.direction = obj.transform.forward;
+		ray.direction = (transform.position - obj.transform.position).normalized;
 	}
 
 
