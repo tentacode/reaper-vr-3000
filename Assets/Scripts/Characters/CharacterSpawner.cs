@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterSpawner : MonoBehaviour {
 
@@ -15,10 +17,12 @@ public class CharacterSpawner : MonoBehaviour {
     public Material TeeShirt;
 
     private List<CharacterSkinKey> _skinKeys;
+    private List<GameObject> _characters;
 
     // Use this for initialization
     void Start () {
         _skinKeys = new List<CharacterSkinKey>();
+        _characters = new List<GameObject>();
 
         GenerateKeys();
 
@@ -38,6 +42,8 @@ public class CharacterSpawner : MonoBehaviour {
             c.transform.localPosition = points[i];
             c.transform.Rotate(0, Random.Range(0, 360), 0);
 
+            _characters.Add(c.gameObject);
+
             var gravityScript = c.GetComponent<Gravity>();
             gravityScript.Planet = Planet;
 
@@ -55,7 +61,10 @@ public class CharacterSpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if(_characters.All(c => c == null))
+        {
+            SceneManager.LoadScene(0);
+        }
 	}
 
     private void GenerateSkin(CharacterSkin skin)
