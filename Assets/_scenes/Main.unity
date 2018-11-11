@@ -672,7 +672,136 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.08234454, y: 0.019952988, z: 0.089119226}
   m_Center: {x: 0.04117224, y: 0.009832506, z: -0.018913856}
---- !u!43 &812999308
+--- !u!1 &896762088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 896762090}
+  - component: {fileID: 896762089}
+  m_Layer: 0
+  m_Name: CharacterSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &896762089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 896762088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4827c4e57608a05499d25579cda30f14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Planet: {fileID: 934172757}
+  CharacterPrefab: {fileID: 114719349542739298, guid: 13942f0369fcfb74c9af05f2d1de81b5,
+    type: 2}
+  Nb: 1
+  CharacterGlassesCollection: {fileID: 11400000, guid: bbae267a17e6ad84280b0aa57b2c0793,
+    type: 2}
+  CharacterHatCollection: {fileID: 11400000, guid: 4698e55a8998ad94e9d6980b22538be9,
+    type: 2}
+  CharacterMouthCollection: {fileID: 11400000, guid: 716b0779775e18a4ab9200b4aa66ede4,
+    type: 2}
+  CharacterColorCollection: {fileID: 11400000, guid: 2d2bf3ade0ae48640a3739e0010c5059,
+    type: 2}
+  TeeShirt: {fileID: 2100000, guid: 155a59d86492269469f0ebbb9cf89d3c, type: 2}
+  audioSource: {fileID: 1118032391}
+  audioClip: {fileID: 8300000, guid: b4cf8c9e2b0ac464e8a1f7f1d8fd5a37, type: 3}
+--- !u!4 &896762090
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 896762088}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &916353468 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1935281209720314, guid: 686048e7c6d1fc04894440fbfd63c4c5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1794843524}
+--- !u!65 &916353472
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 916353468}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08234452, y: 0.019952988, z: 0.089119226}
+  m_Center: {x: 0.041172244, y: 0.009832534, z: -0.018913878}
+--- !u!114 &934172757 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114635354533211410, guid: 686048e7c6d1fc04894440fbfd63c4c5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1794843524}
+  m_Script: {fileID: 11500000, guid: e718a824737aa0641873e6915cab6e0d, type: 3}
+--- !u!1 &974839952 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1050375697499160, guid: 686048e7c6d1fc04894440fbfd63c4c5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1794843524}
+--- !u!65 &974839956
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 974839952}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08234454, y: 0.019952986, z: 0.08911922}
+  m_Center: {x: 0.04117224, y: 0.009832539, z: -0.018913876}
+--- !u!1 &1008026091 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1893555106582416, guid: 686048e7c6d1fc04894440fbfd63c4c5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1794843524}
+--- !u!65 &1008026095
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1008026091}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.09243379, y: 0.08891749, z: 0.07746075}
+  m_Center: {x: -0.06640943, y: 0.5146635, z: 0.08766348}
+--- !u!1 &1011454415 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1780696302746544, guid: 686048e7c6d1fc04894440fbfd63c4c5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1794843524}
+--- !u!65 &1011454419
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1011454415}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08234455, y: 0.013253043, z: 0.08911925}
+  m_Center: {x: 0.030220127, y: 0.0066265506, z: -0.04455961}
+--- !u!43 &1023905951
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1336,6 +1465,39 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.2
   m_Center: {x: 10.102656, y: 5.4218082, z: -6.7629957}
+--- !u!21 &1423640778
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Sprites/Default
+  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _EnableExternalAlpha: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1469306549 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1261284324116666, guid: 686048e7c6d1fc04894440fbfd63c4c5,
@@ -2024,7 +2186,7 @@ Prefab:
         type: 2}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 812999308}
+      objectReference: {fileID: 1023905951}
     - target: {fileID: 23774172768942804, guid: 6d7fb641fa39a7e4cbbb9f6ec1237dc4,
         type: 2}
       propertyPath: m_Materials.Array.data[0]
