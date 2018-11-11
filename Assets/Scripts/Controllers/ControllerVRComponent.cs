@@ -26,7 +26,7 @@ public class ControllerVRComponent : MonoBehaviour
 
     private void OnEnable()
     {
-        SteamVR_TrackedController.MenuButtonClicked += Event_Gripped;
+		SteamVR_TrackedController.MenuButtonClicked += Event_MenuButtonClicked;
         SteamVR_TrackedController.MenuButtonUnclicked += Event_MenuButtonUnclicked;
         SteamVR_TrackedController.TriggerClicked += Event_TriggerClicked;
         SteamVR_TrackedController.TriggerUnclicked += Event_TriggerUnclicked;
@@ -41,7 +41,7 @@ public class ControllerVRComponent : MonoBehaviour
 
     private void OnDisable()
     {
-        SteamVR_TrackedController.MenuButtonClicked -= Event_Gripped;
+		SteamVR_TrackedController.MenuButtonClicked -= Event_MenuButtonClicked;
         SteamVR_TrackedController.MenuButtonUnclicked -= Event_MenuButtonUnclicked;
         SteamVR_TrackedController.TriggerClicked -= Event_TriggerClicked;
         SteamVR_TrackedController.TriggerUnclicked -= Event_TriggerUnclicked;
