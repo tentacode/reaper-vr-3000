@@ -7,4 +7,5 @@ public class CharacterSkinKey {
     public int GlassesId;
     public int HatId;
     public int MouthId;
+    public int ColorId;
 }

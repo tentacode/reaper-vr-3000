@@ -11,6 +11,8 @@ public class CharacterSpawner : MonoBehaviour {
     public CharacterGlassesCollection CharacterGlassesCollection;
     public CharacterHatCollection CharacterHatCollection;
     public CharacterMouthCollection CharacterMouthCollection;
+    public CharacterColorCollection CharacterColorCollection;
+    public Material TeeShirt;
 
     private List<CharacterSkinKey> _skinKeys;
 
@@ -76,6 +78,10 @@ public class CharacterSpawner : MonoBehaviour {
         {
             Instantiate(CharacterMouthCollection.List[key.MouthId], skin.transform);
         }
+
+        var material = Instantiate(TeeShirt);
+        material.color = CharacterColorCollection.List[key.ColorId];
+        skin.MeshRenderer.material = material;
     }
 
     private void GenerateKeys()
@@ -88,18 +94,22 @@ public class CharacterSpawner : MonoBehaviour {
             {
                 for (int mouthIndex = -1; mouthIndex < CharacterMouthCollection.List.Count; mouthIndex++)
                 {
-                    //Si femme pas de moustache
-                    if (hatIndex == 0 && mouthIndex == 0)
+                    for (int colorIndex = 0; colorIndex < CharacterColorCollection.List.Count; colorIndex++)
                     {
-                        continue;
-                    }
+                        //Si femme pas de moustache
+                        if (hatIndex == 0 && mouthIndex == 0)
+                        {
+                            continue;
+                        }
 
-                    _skinKeys.Add(new CharacterSkinKey()
-                    {
-                        GlassesId = glasseIndex,
-                        HatId = hatIndex,
-                        MouthId = mouthIndex,
-                    });
+                        _skinKeys.Add(new CharacterSkinKey()
+                        {
+                            GlassesId = glasseIndex,
+                            HatId = hatIndex,
+                            MouthId = mouthIndex,
+                            ColorId = colorIndex
+                        });
+                    }
                 }
             }
         }
