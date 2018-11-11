@@ -67,8 +67,13 @@ public class CharacterSpawner : MonoBehaviour {
 
         if (_characters.All(c => c == null))
         {
-            SceneManager.LoadScene(0);
+			Invoke ("Reset", 5.0f);
         }
+	}
+
+	void Reset()
+	{
+		SceneManager.LoadScene(0);
 	}
 
     private void GenerateSkin(CharacterSkin skin)

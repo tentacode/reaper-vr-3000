@@ -6,20 +6,23 @@ using Valve.VR.InteractionSystem;
 public class Death : MonoBehaviour {
 
 	public GameObject particles;
+	bool alreadyDead = false;
 
-	// Use this for initialization
-	void Start () {
-		//Invoke ("Die", 3.0f);
-	}
     void OnTriggerEnter(Collider collision)
-    {
-		if (collision.gameObject.tag == "Hand") {
+	{
+		if (collision.gameObject.tag == "Hand" || collision.gameObject.tag == "MainCamera") {
 			Die();
 		}
     }
 
 	void Die()
 	{
+		if (alreadyDead) {
+			return;
+		}
+
+		alreadyDead = true;
+
 		for (int i = 0; i < transform.childCount; i++) {
 			Destroy (transform.GetChild (i).gameObject);
 		}

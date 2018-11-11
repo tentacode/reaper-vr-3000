@@ -9,6 +9,7 @@ TagManager:
   - Character
   - Grab
   - Hand
+  - VR
   layers:
   - Default
   - TransparentFX

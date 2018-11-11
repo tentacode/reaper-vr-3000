@@ -9,6 +9,11 @@ public class ResetViewController : MonoBehaviour
 	public float distanceZ;
 	public float distanceY;
 
+	void Start()
+	{
+		ResetView ();
+	}
+
 	public void ResetView()
 	{
 		var direction = headset.transform.forward;
