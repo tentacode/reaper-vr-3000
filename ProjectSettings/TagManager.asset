@@ -7,6 +7,8 @@ TagManager:
   - Obstacle
   - Planet
   - Character
+  - Grab
+  - Hand
   layers:
   - Default
   - TransparentFX
