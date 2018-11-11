@@ -1087,7 +1087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d22afd15b69696d418504d15e03ebde6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0.1
+  Speed: 0.5
   Planet: {fileID: 0}
   Target: {x: 0, y: 0, z: 0}
 --- !u!114 &114868837395238442
