@@ -32,16 +32,10 @@ public class RotateEarth : MonoBehaviour
 
 		UpdateRay (leftHand);
 
-		if (Settings.Instance.Debug)
-		{
-			Debug.DrawRay(ray.origin, ray.direction * minimumGrabDistance, Color.magenta, 1.0f);
-		}
-
 		var hits = Physics.RaycastAll(ray, minimumGrabDistance, LayerMask.GetMask("Planet", "Character")).ToList();
 
 		if (hits.Any())
 		{
-			Debug.Log ("Hit");
 			RaycastHit hit = hits.OrderBy(h => h.distance).First();
 			grabbed = hit.transform.gameObject;
 			grabbedBy = leftHand;
@@ -49,9 +43,36 @@ public class RotateEarth : MonoBehaviour
 		}
 	}
 
+	public void GrabRight()
+	{
+		if (grabbed != null) {
+			return;
+		}
+
+		UpdateRay (rightHand);
+
+		var hits = Physics.RaycastAll(ray, minimumGrabDistance, LayerMask.GetMask("Planet", "Character")).ToList();
+
+		if (hits.Any())
+		{
+			RaycastHit hit = hits.OrderBy(h => h.distance).First();
+			grabbed = hit.transform.gameObject;
+			grabbedBy = rightHand;
+			lastGrabbedPosition = grabbedBy.transform.position;
+		}
+	}
+
 	public void DeGrabLeft()
 	{
 		if (grabbedBy == leftHand) {
+			grabbed = null;
+			grabbedBy = null;
+		}
+	}
+
+	public void DeGrabRight()
+	{
+		if (grabbedBy == rightHand) {
 			grabbed = null;
 			grabbedBy = null;
 		}
