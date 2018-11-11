@@ -72,25 +72,19 @@ public class RotateEarth : MonoBehaviour
 			var lastDirection = lastGrabbedPosition - this.transform.position;
 			var currentDirection = currentGrabbedPosition - this.transform.position;
 
-			Vector3 x = this.transform.right;
-			Vector3 y = this.transform.up;
-			Vector3 z = this.transform.forward;
+			float angleX_before = Vector3.Angle (lastDirection, Vector3.down);
+			float angleY_before = Vector3.Angle (lastDirection, Vector3.right);
 
-			float angleX_before = Vector3.Angle (lastDirection, x);
-			float angleY_before = Vector3.Angle (lastDirection, y);
-			float angleZ_before = Vector3.Angle (lastDirection, z);
+			float angleX_after = Vector3.Angle (currentDirection, Vector3.down);
+			float angleY_after = Vector3.Angle (currentDirection, Vector3.right);
 
-			float angleX_after = Vector3.Angle (currentDirection, x);
-			float angleY_after = Vector3.Angle (currentDirection, y);
-			float angleZ_after = Vector3.Angle (currentDirection, z);
+			var pivot = new Vector3 (
+				angleX_after - angleX_before,
+				angleY_after - angleY_before, 
+				0
+			);
 
-			var pivot = new Vector3 (angleY_before-angleY_after, angleX_after-angleX_before, 0);
-			//var pivot = new Vector3 (angleX_before-angleX_after,angleY_before-angleY_after,angleZ_after-angleZ_after);
-			//var pivot = new Vector3 (angleZ_before-angleZ_after, angleX_after-angleX_before, 0);
-
-			Debug.DrawRay(transform.position, pivot * 3, Color.black, 0.2f);
-
-			transform.Rotate (pivot);
+			transform.Rotate (pivot, Space.World);
 
 			lastGrabbedPosition = grabbedBy.transform.position;
 		}
