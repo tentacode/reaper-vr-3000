@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11772b1da02463443a23a58e6e4bdfe8, type: 3}
+  m_Name: CharacterGlassesCollection
+  m_EditorClassIdentifier: 
+  List:
+  - {fileID: 1893847029340658, guid: 153424cc6463d7f4eba9e5e6b28ae5e6, type: 2}
+  - {fileID: 1170112346106744, guid: afe906dbe32be494eb31f969de76f35f, type: 2}

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a7f2ef2b28057a42a5802c525fb18bf, type: 3}
+  m_Name: CharacterHatCollection
+  m_EditorClassIdentifier: 
+  List:
+  - {fileID: 1319657874706062, guid: 8f618c1ea89c8a54b938bdf42708e0dd, type: 2}
+  - {fileID: 1810825325764700, guid: 88d2ef2abdbd3f34890cb65c60bb65e9, type: 2}
+  - {fileID: 1899996264884608, guid: 0031aeeb99a31244087a07cc95c0262e, type: 2}
+  - {fileID: 1812964136470540, guid: ca72b311c84595844985bddee8feec73, type: 2}

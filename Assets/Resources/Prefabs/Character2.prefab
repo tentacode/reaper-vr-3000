@@ -67,7 +67,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4185734043031674}
   - component: {fileID: 95414358377199144}
-  - component: {fileID: 135757355763330488}
   m_Layer: 9
   m_Name: test-anim1
   m_TagString: Character
@@ -201,6 +200,8 @@ GameObject:
   - component: {fileID: 54826752571993964}
   - component: {fileID: 114868837395238442}
   - component: {fileID: 114270263236485714}
+  - component: {fileID: 114457371521108902}
+  - component: {fileID: 135897789515437504}
   m_Layer: 0
   m_Name: Character2
   m_TagString: Untagged
@@ -1034,6 +1035,19 @@ MonoBehaviour:
   Planet: {fileID: 0}
   Position: {fileID: 0}
   Collisions: 0
+  Grounded: 0
+--- !u!114 &114457371521108902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1474684879065256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2657ec5665259449840aef5b332325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
 --- !u!114 &114716196156273200
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1058,6 +1072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5298ebc3b2bdaa4386f6511ba4a096a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Planet: {fileID: 0}
   Gravity: {fileID: 0}
   Rigidbody: {fileID: 0}
   CharacterAI: {fileID: 0}
@@ -1104,15 +1119,15 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   EventsAfter: []
---- !u!135 &135757355763330488
+--- !u!135 &135897789515437504
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1079944523387380}
+  m_GameObject: {fileID: 1474684879065256}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.8381112
-  m_Center: {x: -0, y: -0, z: 2.4}
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}

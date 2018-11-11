@@ -8,8 +8,16 @@ public class CharacterSpawner : MonoBehaviour {
     public Character CharacterPrefab;
     public int Nb;
 
+    public CharacterGlassesCollection CharacterGlassesCollection;
+    public CharacterHatCollection CharacterHatCollection;
+    public CharacterMouthCollection CharacterMouthCollection;
+
+    private List<string> _skinKeys;
+
     // Use this for initialization
     void Start () {
+        _skinKeys = new List<string>();
+
         var points = PointsOnSphere(Nb);
         for (int i = 0; i < Nb; i++)
         {
@@ -25,6 +33,10 @@ public class CharacterSpawner : MonoBehaviour {
 
             var cScript = c.GetComponent<Character>();
             cScript.Planet = Planet;
+
+            var sScript = c.GetComponent<CharacterSkin>();
+
+            GenerateSkin(sScript);
         }
 	}
 	
@@ -32,6 +44,56 @@ public class CharacterSpawner : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    private void GenerateSkin(CharacterSkin skin)
+    {
+        var foundSkin = false;
+
+        while(!foundSkin)
+        {
+            int glasses = Random.Range(-1, CharacterGlassesCollection.List.Count);
+            int hat = Random.Range(-1, CharacterHatCollection.List.Count);
+            int mouth = Random.Range(-1, CharacterMouthCollection.List.Count);
+
+            //Si femme pas de moustache
+            if(hat == 0 && mouth == 0)
+            {
+                continue;
+            }
+
+            var key = GenerateKey(glasses, hat, mouth);
+
+            if(_skinKeys.Contains(key))
+            {
+                continue;
+            }
+
+            skin.Key = key;
+            _skinKeys.Add(key);
+
+            if(glasses != -1)
+            {
+                Instantiate(CharacterGlassesCollection.List[glasses], skin.transform);
+            }
+
+            if (hat != -1)
+            {
+                Instantiate(CharacterHatCollection.List[hat], skin.transform);
+            }
+
+            if (mouth != -1)
+            {
+                Instantiate(CharacterMouthCollection.List[mouth], skin.transform);
+            }
+
+            foundSkin = true;
+        }
+    }
+
+    private string GenerateKey(int glasses, int hat, int mouth)
+    {
+        return glasses + "-" + hat + "-" + mouth;
+    }
 
     private List<Vector3> PointsOnSphere(int n)
     {
