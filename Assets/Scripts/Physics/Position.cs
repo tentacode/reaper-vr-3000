@@ -24,4 +24,10 @@ public class Position : MonoBehaviour {
         PreviousPosition = CurrentPosition;
         CurrentPosition = transform.position;
     }
+
+    public void ResetPosition()
+    {
+        PreviousPosition = transform.position;
+        CurrentPosition = transform.position;
+    }
 }

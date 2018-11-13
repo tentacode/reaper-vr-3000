@@ -19,10 +19,15 @@ public class CharacterAI : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate() {
         if(Target == Vector3.zero || (Target - transform.localPosition).magnitude < Planet.transform.localScale.x / 10f)
         {
             NewTarget();
+        }
+
+        if (Target != null)
+        {
+            Move();
         }
 
         UpdateRay();
@@ -40,11 +45,6 @@ public class CharacterAI : MonoBehaviour {
         }
 
         //transform.Translate(_ray.direction * Time.deltaTime * 0.1f, Space.World);
-
-        if (Target != null)
-        {
-            Move();
-        }
 
         if (Target != Vector3.zero && Settings.Instance.Debug)
         {
@@ -68,19 +68,25 @@ public class CharacterAI : MonoBehaviour {
         Vector3 newPos = transform.localPosition;
         Vector3 travelDir = (Target - transform.localPosition).normalized;
 
+        if (travelDir != Vector3.zero)
+        {
+            transform.up = -(Vector3.zero - transform.localPosition).normalized;
+            //transform.localRotation = Quaternion.LookRotation(travelDir, transform.up);
+        }
+
         //move forward by our speed
-        newPos += travelDir * (Time.deltaTime * Speed);
+        newPos += transform.forward * (Time.fixedDeltaTime * Speed);
 
         //turning the position into a direction from the centre
-        newPos.Normalize();
-        newPos *= Planet.Rayon;
+        //newPos.Normalize();
+        //newPos *= Planet.Rayon;
 
-        //transform.forward = newPos - transform.position;
-
-        Vector3 gravityUp = (transform.localPosition - Vector3.zero).normalized;
-        Vector3 localUp = transform.up;
-
+        //var previousPosition = transform.localPosition;
         transform.localPosition = newPos;
+
+        //var movement = newPos - previousPosition;
+
+        
     }
 
     private void NewTarget()
