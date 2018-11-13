@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4464639695594762}
   - component: {fileID: 33780655394733004}
   - component: {fileID: 23925300773885890}
-  m_Layer: 0
+  - component: {fileID: 65553936808909118}
+  m_Layer: 10
   m_Name: pCube4
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,9 +39,10 @@ GameObject:
   - component: {fileID: 4657070433469048}
   - component: {fileID: 33330536910951094}
   - component: {fileID: 23955329432881060}
-  m_Layer: 0
+  - component: {fileID: 65583664481047296}
+  m_Layer: 10
   m_Name: Asset_batiment_module2_low5
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,9 +57,10 @@ GameObject:
   - component: {fileID: 4452504123843722}
   - component: {fileID: 33141368797878550}
   - component: {fileID: 23783801642578832}
-  m_Layer: 0
+  - component: {fileID: 65162360205325386}
+  m_Layer: 10
   m_Name: pCube10
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,9 +75,10 @@ GameObject:
   - component: {fileID: 4229536998878076}
   - component: {fileID: 33046464407463882}
   - component: {fileID: 23351880294462072}
-  m_Layer: 0
+  - component: {fileID: 135120517879549772}
+  m_Layer: 10
   m_Name: pCylinder11
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,9 +108,10 @@ GameObject:
   - component: {fileID: 4282481323316458}
   - component: {fileID: 33114731411484952}
   - component: {fileID: 23076712525938430}
-  m_Layer: 0
+  - component: {fileID: 135476628395385724}
+  m_Layer: 10
   m_Name: pCylinder8
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,9 +126,10 @@ GameObject:
   - component: {fileID: 4871896554492434}
   - component: {fileID: 33377370560994148}
   - component: {fileID: 23866476679043318}
-  m_Layer: 0
+  - component: {fileID: 65366640525699756}
+  m_Layer: 10
   m_Name: Asset_batiment_module2_low4
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,9 +144,10 @@ GameObject:
   - component: {fileID: 4151919293332660}
   - component: {fileID: 33391177319527052}
   - component: {fileID: 23879543498771208}
-  m_Layer: 0
+  - component: {fileID: 135832061060486244}
+  m_Layer: 10
   m_Name: pCylinder18
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,9 +162,10 @@ GameObject:
   - component: {fileID: 4001070631687282}
   - component: {fileID: 33204395761731470}
   - component: {fileID: 23775285110601808}
-  m_Layer: 0
+  - component: {fileID: 135150388727444950}
+  m_Layer: 10
   m_Name: pCylinder3
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,9 +180,10 @@ GameObject:
   - component: {fileID: 4958853145858008}
   - component: {fileID: 33880870599087150}
   - component: {fileID: 23906533857173508}
-  m_Layer: 0
+  - component: {fileID: 135244482673046166}
+  m_Layer: 10
   m_Name: pCylinder4
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -189,9 +198,10 @@ GameObject:
   - component: {fileID: 4480786619330098}
   - component: {fileID: 33539943213980612}
   - component: {fileID: 23764251070853170}
-  m_Layer: 0
+  - component: {fileID: 135497222510468350}
+  m_Layer: 10
   m_Name: pCylinder6
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -206,9 +216,10 @@ GameObject:
   - component: {fileID: 4083779054716344}
   - component: {fileID: 33988728676809742}
   - component: {fileID: 23659003015434636}
-  m_Layer: 0
+  - component: {fileID: 135121719565831108}
+  m_Layer: 10
   m_Name: pCylinder15
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -223,9 +234,10 @@ GameObject:
   - component: {fileID: 4988238434817182}
   - component: {fileID: 33576134101492646}
   - component: {fileID: 23596486348913678}
-  m_Layer: 0
+  - component: {fileID: 135643032593396074}
+  m_Layer: 10
   m_Name: pCylinder5
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -240,9 +252,10 @@ GameObject:
   - component: {fileID: 4452281883930660}
   - component: {fileID: 33645705398577268}
   - component: {fileID: 23687144563717032}
-  m_Layer: 0
+  - component: {fileID: 135880422099797116}
+  m_Layer: 10
   m_Name: pCylinder7
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -257,9 +270,10 @@ GameObject:
   - component: {fileID: 4777252993527726}
   - component: {fileID: 33436822442118726}
   - component: {fileID: 23777768122655688}
-  m_Layer: 0
+  - component: {fileID: 65739855156371698}
+  m_Layer: 10
   m_Name: Asset_batiment_module2_low
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -274,9 +288,10 @@ GameObject:
   - component: {fileID: 4983649503581338}
   - component: {fileID: 33348125228264016}
   - component: {fileID: 23151146071398270}
-  m_Layer: 0
+  - component: {fileID: 135933958900318868}
+  m_Layer: 10
   m_Name: pCylinder14
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -306,9 +321,10 @@ GameObject:
   - component: {fileID: 4264040821631880}
   - component: {fileID: 33269059650253342}
   - component: {fileID: 23197515950448978}
-  m_Layer: 0
+  - component: {fileID: 65191788246228010}
+  m_Layer: 10
   m_Name: Asset_batiment_module1_low
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -323,9 +339,10 @@ GameObject:
   - component: {fileID: 4676175882022080}
   - component: {fileID: 33939541809632852}
   - component: {fileID: 23166830622337974}
-  m_Layer: 0
+  - component: {fileID: 64774554703694282}
+  m_Layer: 8
   m_Name: Planette
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -340,9 +357,10 @@ GameObject:
   - component: {fileID: 4027371167138548}
   - component: {fileID: 33320191695323964}
   - component: {fileID: 23568976529879376}
-  m_Layer: 0
+  - component: {fileID: 65716637978928702}
+  m_Layer: 10
   m_Name: pCube11
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -361,9 +379,10 @@ GameObject:
   - component: {fileID: 114127028258827572}
   - component: {fileID: 114131601521413478}
   - component: {fileID: 114471948246477162}
-  m_Layer: 8
+  - component: {fileID: 114216522520172526}
+  m_Layer: 0
   m_Name: Planet2
-  m_TagString: Planet
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -378,9 +397,10 @@ GameObject:
   - component: {fileID: 4591325316014868}
   - component: {fileID: 33619354998504626}
   - component: {fileID: 23058317318865746}
-  m_Layer: 0
+  - component: {fileID: 135282317750046606}
+  m_Layer: 10
   m_Name: pCylinder17
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -411,9 +431,10 @@ GameObject:
   - component: {fileID: 4883904382149486}
   - component: {fileID: 33285839380787138}
   - component: {fileID: 23612997569105258}
-  m_Layer: 0
+  - component: {fileID: 65007576868121298}
+  m_Layer: 10
   m_Name: Asset_batiment_module1_low2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -428,9 +449,10 @@ GameObject:
   - component: {fileID: 4171746064675878}
   - component: {fileID: 33759588015181194}
   - component: {fileID: 23207525224380510}
-  m_Layer: 0
+  - component: {fileID: 135511117050616318}
+  m_Layer: 10
   m_Name: pCylinder13
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -445,9 +467,10 @@ GameObject:
   - component: {fileID: 4363615953994370}
   - component: {fileID: 33602380778977224}
   - component: {fileID: 23006379290026006}
-  m_Layer: 0
+  - component: {fileID: 135927853222913190}
+  m_Layer: 10
   m_Name: pCylinder12
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -480,8 +503,24 @@ GameObject:
   - component: {fileID: 4468165369043752}
   - component: {fileID: 33361643751497996}
   - component: {fileID: 23996473471603026}
-  m_Layer: 0
+  - component: {fileID: 135249832424997832}
+  m_Layer: 10
   m_Name: pCylinder9
+  m_TagString: Obstacle
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1665765977430274
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4561708683059156}
+  m_Layer: 0
+  m_Name: CharactersRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -497,9 +536,10 @@ GameObject:
   - component: {fileID: 4847551553330628}
   - component: {fileID: 33591130208374024}
   - component: {fileID: 23554980348707930}
-  m_Layer: 0
+  - component: {fileID: 135441169488880556}
+  m_Layer: 10
   m_Name: pCylinder16
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -514,9 +554,10 @@ GameObject:
   - component: {fileID: 4009364018561258}
   - component: {fileID: 33295918787219214}
   - component: {fileID: 23441289442452334}
-  m_Layer: 0
+  - component: {fileID: 65534565375394132}
+  m_Layer: 10
   m_Name: Asset_batiment_module1_low1
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -531,9 +572,10 @@ GameObject:
   - component: {fileID: 4660901527063896}
   - component: {fileID: 33400972293261660}
   - component: {fileID: 23828928653524500}
-  m_Layer: 0
+  - component: {fileID: 65838024266928622}
+  m_Layer: 10
   m_Name: Asset_batiment_module2_low3
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -548,9 +590,10 @@ GameObject:
   - component: {fileID: 4447977333675530}
   - component: {fileID: 33273768650879702}
   - component: {fileID: 23370646368265692}
-  m_Layer: 0
+  - component: {fileID: 65868001427575012}
+  m_Layer: 10
   m_Name: pCube8
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -565,9 +608,10 @@ GameObject:
   - component: {fileID: 4818369931622920}
   - component: {fileID: 33878851078347738}
   - component: {fileID: 23331059462702120}
-  m_Layer: 0
+  - component: {fileID: 65965750668136832}
+  m_Layer: 10
   m_Name: pCube13
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -582,9 +626,10 @@ GameObject:
   - component: {fileID: 4278123155592768}
   - component: {fileID: 33636016604423726}
   - component: {fileID: 23836017090097324}
-  m_Layer: 0
+  - component: {fileID: 65657337415872656}
+  m_Layer: 10
   m_Name: Asset_batiment_module1_low3
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -599,9 +644,10 @@ GameObject:
   - component: {fileID: 4214194453748850}
   - component: {fileID: 33609145404148132}
   - component: {fileID: 23548344436358716}
-  m_Layer: 0
+  - component: {fileID: 65991553457717190}
+  m_Layer: 10
   m_Name: Asset_batiment_module2_low6
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -616,9 +662,10 @@ GameObject:
   - component: {fileID: 4086913320915406}
   - component: {fileID: 33341375829580786}
   - component: {fileID: 23401891311955402}
-  m_Layer: 0
+  - component: {fileID: 65309198790895768}
+  m_Layer: 10
   m_Name: pCube6
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -633,9 +680,10 @@ GameObject:
   - component: {fileID: 4710560933767356}
   - component: {fileID: 33808065158859214}
   - component: {fileID: 23643009940534558}
-  m_Layer: 0
+  - component: {fileID: 65759134824436648}
+  m_Layer: 10
   m_Name: pCube9
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -650,9 +698,10 @@ GameObject:
   - component: {fileID: 4216342158927668}
   - component: {fileID: 33253664855637496}
   - component: {fileID: 23613608199579872}
-  m_Layer: 0
+  - component: {fileID: 65452204833047620}
+  m_Layer: 10
   m_Name: pCube12
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -667,9 +716,10 @@ GameObject:
   - component: {fileID: 4552245237242878}
   - component: {fileID: 33146518618808266}
   - component: {fileID: 23294178891022886}
-  m_Layer: 0
+  - component: {fileID: 65027106350477878}
+  m_Layer: 10
   m_Name: Asset_batiment_module2_low1
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -684,9 +734,10 @@ GameObject:
   - component: {fileID: 4214546190137736}
   - component: {fileID: 33287519256870282}
   - component: {fileID: 23886255555552544}
-  m_Layer: 0
+  - component: {fileID: 135318419759536324}
+  m_Layer: 10
   m_Name: pCylinder10
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -701,9 +752,10 @@ GameObject:
   - component: {fileID: 4186221558912146}
   - component: {fileID: 33038614176086296}
   - component: {fileID: 23233932082185330}
-  m_Layer: 0
+  - component: {fileID: 65568177861942168}
+  m_Layer: 10
   m_Name: Asset_batiment_module2_low2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1020,6 +1072,19 @@ Transform:
   m_Father: {fileID: 4764828710060614}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4561708683059156
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1665765977430274}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4800152770685750}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4591325316014868
 Transform:
   m_ObjectHideFlags: 1
@@ -1187,6 +1252,7 @@ Transform:
   - {fileID: 4764828710060614}
   - {fileID: 4692108153093788}
   - {fileID: 4676175882022080}
+  - {fileID: 4561708683059156}
   m_Father: {fileID: 4653254917075764}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2761,6 +2827,248 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1383363265082696}
   m_Mesh: {fileID: 4300022, guid: 2098772be9a10294b9344f30447dd259, type: 3}
+--- !u!64 &64774554703694282
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1485913636141044}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 2098772be9a10294b9344f30447dd259, type: 3}
+--- !u!65 &65007576868121298
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1568308359173212}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08234455, y: 0.03138864, z: 0.12382268}
+  m_Center: {x: 0.041172262, y: 0.015550306, z: 9.2687036e-10}
+--- !u!65 &65027106350477878
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1935281209720314}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08234452, y: 0.019952988, z: 0.089119226}
+  m_Center: {x: 0.041172244, y: 0.009832534, z: -0.018913878}
+--- !u!65 &65162360205325386
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1069896554661480}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.09243378, y: 0.08891748, z: 0.07746077}
+  m_Center: {x: -0.06640943, y: 0.5146634, z: 0.08766352}
+--- !u!65 &65191788246228010
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1477813171524568}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08234454, y: 0.031388644, z: 0.12382268}
+  m_Center: {x: 0.04117224, y: 0.0155503675, z: 0.00000000752892}
+--- !u!65 &65309198790895768
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1893555106582416}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.09243379, y: 0.08891749, z: 0.07746075}
+  m_Center: {x: -0.06640943, y: 0.5146635, z: 0.08766348}
+--- !u!65 &65366640525699756
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1263259823794442}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.082344525, y: 0.019952986, z: 0.08911922}
+  m_Center: {x: 0.04117227, y: 0.009832535, z: -0.01891389}
+--- !u!65 &65452204833047620
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1929993924689434}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08234453, y: 0.013253045, z: 0.08911925}
+  m_Center: {x: 0.030220145, y: 0.0066265487, z: -0.0445596}
+--- !u!65 &65534565375394132
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1682606672761096}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.082344525, y: 0.031388648, z: 0.1238227}
+  m_Center: {x: 0.041172236, y: 0.015550364, z: -0.000000015214518}
+--- !u!65 &65553936808909118
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1024580035625798}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08234455, y: 0.013253047, z: 0.089119256}
+  m_Center: {x: 0.030220162, y: 0.006626518, z: -0.04455959}
+--- !u!65 &65568177861942168
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1999045371517164}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08234452, y: 0.019952988, z: 0.089119226}
+  m_Center: {x: 0.04117223, y: 0.009832534, z: -0.018913856}
+--- !u!65 &65583664481047296
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1050375697499160}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08234454, y: 0.019952986, z: 0.08911922}
+  m_Center: {x: 0.04117224, y: 0.009832539, z: -0.018913876}
+--- !u!65 &65657337415872656
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1827861322928812}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.082344525, y: 0.03138864, z: 0.123822674}
+  m_Center: {x: 0.041172255, y: 0.015550305, z: 0.0000000108033005}
+--- !u!65 &65716637978928702
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1486612385510194}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.082344525, y: 0.013253048, z: 0.089119256}
+  m_Center: {x: 0.030220134, y: 0.0066265776, z: -0.04455962}
+--- !u!65 &65739855156371698
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1438724003644786}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08234454, y: 0.019952988, z: 0.089119226}
+  m_Center: {x: 0.04117224, y: 0.009832506, z: -0.018913856}
+--- !u!65 &65759134824436648
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1910843967802180}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.092433795, y: 0.088917516, z: 0.07746075}
+  m_Center: {x: -0.066409454, y: 0.51466364, z: 0.08766348}
+--- !u!65 &65838024266928622
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1685839131364876}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.082344525, y: 0.019952986, z: 0.08911922}
+  m_Center: {x: 0.041172255, y: 0.009832475, z: -0.018913874}
+--- !u!65 &65868001427575012
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1717611045433952}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.09243379, y: 0.08891752, z: 0.07746076}
+  m_Center: {x: -0.06640946, y: 0.5146637, z: 0.0876635}
+--- !u!65 &65965750668136832
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1780696302746544}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08234455, y: 0.013253043, z: 0.08911925}
+  m_Center: {x: 0.030220127, y: 0.0066265506, z: -0.04455961}
+--- !u!65 &65991553457717190
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1870701100669974}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08234454, y: 0.019952986, z: 0.08911922}
+  m_Center: {x: 0.041172255, y: 0.009832509, z: -0.018913873}
 --- !u!108 &108813276034002620
 Light:
   m_ObjectHideFlags: 1
@@ -2855,6 +3163,18 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   EventsAfter: []
+--- !u!114 &114216522520172526
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1495293080878644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8222beebf62553f4bb1ea345f2e67717, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Gravity: -1
 --- !u!114 &114333417009727398
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2998,6 +3318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rayon: 0.5
+  CharactersRoot: {fileID: 4561708683059156}
 --- !u!114 &114830264965223924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3013,3 +3334,195 @@ MonoBehaviour:
   headset: {fileID: 0}
   distanceZ: 1.25
   distanceY: -0.8
+--- !u!135 &135120517879549772
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1093037486524420}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.2
+  m_Center: {x: 10.102658, y: 5.4218073, z: -6.7629943}
+--- !u!135 &135121719565831108
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1383363265082696}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.2
+  m_Center: {x: 10.102656, y: 5.4218082, z: -6.7629957}
+--- !u!135 &135150388727444950
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1280257425657478}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.2
+  m_Center: {x: 10.102656, y: 5.4218082, z: -6.762995}
+--- !u!135 &135244482673046166
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1338867495974190}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.2
+  m_Center: {x: 10.102658, y: 5.4218087, z: -6.762994}
+--- !u!135 &135249832424997832
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1632743877576224}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.2
+  m_Center: {x: 10.102656, y: 5.421809, z: -6.762994}
+--- !u!135 &135282317750046606
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1505446358872166}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.2
+  m_Center: {x: 10.102655, y: 5.4218087, z: -6.762994}
+--- !u!135 &135318419759536324
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1939006095389076}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.2
+  m_Center: {x: 10.102655, y: 5.4218082, z: -6.762994}
+--- !u!135 &135441169488880556
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1667188318475840}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.2
+  m_Center: {x: 10.102656, y: 5.42181, z: -6.7629967}
+--- !u!135 &135476628395385724
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1261284324116666}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.2
+  m_Center: {x: 10.102655, y: 5.4218097, z: -6.762995}
+--- !u!135 &135497222510468350
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1352218809607188}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.2
+  m_Center: {x: 10.102655, y: 5.4218082, z: -6.762995}
+--- !u!135 &135511117050616318
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1596254630030814}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.2
+  m_Center: {x: 10.102657, y: 5.421811, z: -6.7629957}
+--- !u!135 &135643032593396074
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1391313781802290}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.2
+  m_Center: {x: 10.102656, y: 5.4218087, z: -6.7629952}
+--- !u!135 &135832061060486244
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1274812500973114}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.2
+  m_Center: {x: 10.102659, y: 5.4218106, z: -6.7629957}
+--- !u!135 &135880422099797116
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1428675502370100}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.2
+  m_Center: {x: 10.102659, y: 5.4218087, z: -6.7629957}
+--- !u!135 &135927853222913190
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1611969605846980}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.2
+  m_Center: {x: 10.102656, y: 5.4218087, z: -6.7629933}
+--- !u!135 &135933958900318868
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1462295618989984}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.2
+  m_Center: {x: 10.102658, y: 5.4218087, z: -6.7629976}

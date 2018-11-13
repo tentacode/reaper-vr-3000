@@ -9,8 +9,10 @@ public class CharacterAI : MonoBehaviour {
     public float Speed;
     public Planet Planet;
     public Vector3 Target;
+    public Rigidbody Rigidbody;
 
     private Ray _ray;
+    private float _timer;
 
     // Use this for initialization
     void Start () {
@@ -19,36 +21,24 @@ public class CharacterAI : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void FixedUpdate() {
-        if(Target == Vector3.zero || (Target - transform.localPosition).magnitude < Planet.transform.localScale.x / 10f)
+	public void Update() {
+        _timer -= Time.deltaTime;
+
+        if (_timer <= 0)
         {
             NewTarget();
         }
 
-        if (Target != null)
-        {
-            Move();
-        }
+        Move();
 
         UpdateRay();
 
-        var hits = Physics.RaycastAll(_ray, 1, LayerMask.GetMask("Obstacle")).ToList();
-        //hits.RemoveAll(h => h.collider.gameObject.tag != "Obstacle" && h.collider.gameObject.tag != "Planet");
 
-        if (hits.Any())
+        var hit = Physics.Raycast(_ray, 0.1f, LayerMask.GetMask("Obstacle"));
+
+        if (hit)
         {
             transform.Rotate(0, 90, 0);
-
-            UpdateRay();
-
-            NewTarget();
-        }
-
-        //transform.Translate(_ray.direction * Time.deltaTime * 0.1f, Space.World);
-
-        if (Target != Vector3.zero && Settings.Instance.Debug)
-        {
-            Debug.DrawLine(Target + Planet.transform.position, Target + Planet.transform.position + (Target - Vector3.zero).normalized * 0.5f, Color.cyan);
         }
     }
 
@@ -59,46 +49,54 @@ public class CharacterAI : MonoBehaviour {
 
         if (Settings.Instance.Debug)
         {
-            Debug.DrawRay(_ray.origin, _ray.direction * 0.2f, Color.yellow, Time.deltaTime * 2);
+            Debug.DrawRay(_ray.origin, _ray.direction * 0.1f, Color.yellow, Time.deltaTime * 2);
         }
     }
 
-    private void Move()
+    public void Move()
     {
-        Vector3 newPos = transform.localPosition;
-        Vector3 travelDir = (Target - transform.localPosition).normalized;
+        //Vector3 newPos = transform.localPosition;
+        //Vector3 travelDir = (Target - transform.localPosition).normalized;
 
-        if (travelDir != Vector3.zero)
-        {
-            transform.up = -(Vector3.zero - transform.localPosition).normalized;
-            //transform.localRotation = Quaternion.LookRotation(travelDir, transform.up);
-        }
+        //if (travelDir != Vector3.zero)
+        //{
+        //    transform.up = -(Vector3.zero - transform.localPosition).normalized;
+        //    transform.rotation = Quaternion.LookRotation(transform.TransformDirection(travelDir), transform.up);
+        //}
 
-        //move forward by our speed
-        newPos += transform.forward * (Time.fixedDeltaTime * Speed);
+        ////move forward by our speed
+        //newPos += transform.forward * (Time.fixedDeltaTime * Speed);
 
-        //turning the position into a direction from the centre
-        //newPos.Normalize();
-        //newPos *= Planet.Rayon;
+        ////turning the position into a direction from the centre
+        ////newPos.Normalize();
+        ////newPos *= Planet.Rayon;
 
-        //var previousPosition = transform.localPosition;
-        transform.localPosition = newPos;
+        ////var previousPosition = transform.localPosition;
+        //transform.localPosition = newPos;
 
-        //var movement = newPos - previousPosition;
+        ////var movement = newPos - previousPosition;
 
-        
+        var newPos = transform.position + transform.forward * Speed * Time.deltaTime;
+
+        Rigidbody.MovePosition(newPos);
     }
 
     private void NewTarget()
     {
         if (Planet != null)
         {
-            Target = RandomSpherePoint(
-                0,
-                0,
-                0,
-                Planet.Rayon
-                );
+            //Target = RandomSpherePoint(
+            //    0,
+            //    0,
+            //    0,
+            //    Planet.Rayon
+            //    );
+
+            _timer = Random.Range(5, 10);
+
+            var y = Random.Range(0, 360);
+
+            transform.Rotate(0, y, 0);
         }
 
     }

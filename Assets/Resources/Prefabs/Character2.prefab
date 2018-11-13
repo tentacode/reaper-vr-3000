@@ -162,7 +162,6 @@ GameObject:
   - component: {fileID: 114719349542739298}
   - component: {fileID: 114284073930370386}
   - component: {fileID: 114774974931576160}
-  - component: {fileID: 114716196156273200}
   - component: {fileID: 54826752571993964}
   - component: {fileID: 114868837395238442}
   - component: {fileID: 114270263236485714}
@@ -841,7 +840,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1033,10 +1032,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc821543b3c22244a6b0420a09f0ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Planet: {fileID: 0}
-  Position: {fileID: 0}
-  Collisions: 0
-  Grounded: 0
+  GravitySource: {fileID: 0}
+  Rigidbody: {fileID: 54826752571993964}
 --- !u!114 &114457371521108902
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1050,19 +1047,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Key: 
   MeshRenderer: {fileID: 23469067044020398}
---- !u!114 &114716196156273200
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1474684879065256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c24b0b10c7a0f5742b87b16963fadb5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PreviousPosition: {x: 0, y: 0, z: 0}
-  CurrentPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &114719349542739298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1075,8 +1059,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Planet: {fileID: 0}
-  Gravity: {fileID: 0}
-  Rigidbody: {fileID: 0}
+  GravityBody: {fileID: 0}
+  Rigidbody: {fileID: 54826752571993964}
   CharacterAI: {fileID: 0}
 --- !u!114 &114774974931576160
 MonoBehaviour:
@@ -1089,9 +1073,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d22afd15b69696d418504d15e03ebde6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0.000001
+  Speed: 0.1
   Planet: {fileID: 0}
   Target: {x: 0, y: 0, z: 0}
+  Rigidbody: {fileID: 54826752571993964}
 --- !u!114 &114828907617769226
 MonoBehaviour:
   m_ObjectHideFlags: 1

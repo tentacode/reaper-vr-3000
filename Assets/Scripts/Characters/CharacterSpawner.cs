@@ -40,14 +40,13 @@ public class CharacterSpawner : MonoBehaviour {
         var points = PointsOnSphere(Nb);
         for (int i = 0; i < Nb; i++)
         {
-            var c = Instantiate(CharacterPrefab, Planet.transform);
+            var c = Instantiate(CharacterPrefab, Planet.CharactersRoot.transform);
             c.transform.localPosition = points[i];
-            c.transform.Rotate(0, Random.Range(0, 360), 0);
 
             _characters.Add(c.gameObject);
 
-            var gravityScript = c.GetComponent<Gravity>();
-            gravityScript.Planet = Planet;
+            //var gravityScript = c.GetComponent<Gravity>();
+            //gravityScript.Planet = Planet;
 
             var aiScript = c.GetComponent<CharacterAI>();
             aiScript.Planet = Planet;
@@ -58,17 +57,21 @@ public class CharacterSpawner : MonoBehaviour {
             var sScript = c.GetComponent<CharacterSkin>();
 
             GenerateSkin(sScript);
+
+            Planet.AddCharacter(aiScript);
         }
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        /*
         AliveCount.Value = _characters.Count(x => x != null);
 
         if (_characters.All(c => c == null))
         {
 			Invoke ("Reset", 5.0f);
         }
+        */
 	}
 
 	void Reset()
