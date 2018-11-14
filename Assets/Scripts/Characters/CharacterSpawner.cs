@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class CharacterSpawner : MonoBehaviour {
 
     public Planet Planet;
+    public GravitySource PlanetGravitySource;
+    public Collider PlanetCollider;
     public Character CharacterPrefab;
     public int Nb;
 
@@ -45,8 +47,9 @@ public class CharacterSpawner : MonoBehaviour {
 
             _characters.Add(c.gameObject);
 
-            //var gravityScript = c.GetComponent<Gravity>();
-            //gravityScript.Planet = Planet;
+            var gravityScript = c.GetComponent<GravityBody>();
+            gravityScript.GravitySource = PlanetGravitySource;
+            gravityScript.ColliderSource = PlanetCollider;
 
             var aiScript = c.GetComponent<CharacterAI>();
             aiScript.Planet = Planet;

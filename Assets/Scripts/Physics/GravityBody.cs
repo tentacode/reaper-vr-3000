@@ -6,20 +6,22 @@ using UnityEngine;
 
 public class GravityBody : MonoBehaviour {
 
+    public Collider ColliderSource;
     public GravitySource GravitySource;
     public Rigidbody Rigidbody;
 
     private Ray _ray;
+    private RaycastHit _resultRaycast;
 
     // Use this for initialization
     void Start () {
         Rigidbody = GetComponent<Rigidbody>();
-        GravitySource = FindObjectOfType<GravitySource>();
 
         Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
         Rigidbody.useGravity = false;
 
         _ray = new Ray();
+        _resultRaycast = new RaycastHit();
     }
 	
 	// Update is called once per frame
@@ -27,22 +29,42 @@ public class GravityBody : MonoBehaviour {
     {
         UpdateRay();
 
-        var hits = Physics.RaycastAll(_ray, 0.1f, LayerMask.GetMask("Planet")).ToList();
-
-        if (hits.Any())
+        if (ColliderSource != null)
         {
-            var hit = hits.OrderBy(h => h.distance).First();
-            transform.position = hit.point;
+            if (ColliderSource.Raycast(_ray, out _resultRaycast, 0.1f))
+            {
+                transform.position = _resultRaycast.point;
 
-            Rigidbody.isKinematic = true;
-            Rigidbody.velocity = Vector3.zero;
+                Rigidbody.isKinematic = true;
+                Rigidbody.velocity = Vector3.zero;
 
-            ApplyGravityOrientation();
+                ApplyGravityOrientation();
+            }
+            else
+            {
+                Rigidbody.isKinematic = false;
+                ApplyGravity();
+            }
         }
         else
         {
-            Rigidbody.isKinematic = false;
-            ApplyGravity();
+            var hits = Physics.RaycastAll(_ray, 0.1f, LayerMask.GetMask("Planet")).ToList();
+
+            if (hits.Any())
+            {
+                var hit = hits.OrderBy(h => h.distance).First();
+                transform.position = hit.point;
+
+                Rigidbody.isKinematic = true;
+                Rigidbody.velocity = Vector3.zero;
+
+                ApplyGravityOrientation();
+            }
+            else
+            {
+                Rigidbody.isKinematic = false;
+                ApplyGravity();
+            }
         }
     }
 

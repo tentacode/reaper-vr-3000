@@ -6,13 +6,19 @@ using UnityEngine;
 
 public class GravitySource : MonoBehaviour {
 
-    public float Gravity = -9.81f;
+    public float Gravity = -1f;
+    public float AttractRayon = 2f;
 
     public void Attract(Rigidbody body)
     {
-        var gravityUp = (body.transform.position - transform.position).normalized;
+        var vectorBetweenCorps = body.transform.position - transform.position;
+        var gravityUp = vectorBetweenCorps.normalized;
+        var distance = vectorBetweenCorps.magnitude;
 
-        body.AddForce(gravityUp * Gravity);
+        if (distance < AttractRayon)
+        {
+            body.AddForce(gravityUp * Gravity);
+        }
     }
 
     public void UpdateOrientation(Transform body)
