@@ -34,14 +34,14 @@ public class GravityBody : MonoBehaviour {
             var hit = hits.OrderBy(h => h.distance).First();
             transform.position = hit.point;
 
-            //Rigidbody.isKinematic = true;
+            Rigidbody.isKinematic = true;
             Rigidbody.velocity = Vector3.zero;
 
             ApplyGravityOrientation();
         }
         else
         {
-            //Rigidbody.isKinematic = false;
+            Rigidbody.isKinematic = false;
             ApplyGravity();
         }
     }

@@ -91,14 +91,13 @@ public class CharacterAI : MonoBehaviour {
             //    0,
             //    Planet.Rayon
             //    );
-
-            _timer = Random.Range(5, 10);
-
-            var y = Random.Range(0, 360);
-
-            transform.Rotate(0, y, 0);
         }
 
+        _timer = Random.Range(5, 10);
+
+        var y = Random.Range(0, 360);
+
+        transform.Rotate(0, y, 0);
     }
 
     private Vector3 RandomSpherePoint(float x0, float y0, float z0, float radius)

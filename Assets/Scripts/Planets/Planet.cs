@@ -9,6 +9,7 @@ public class Planet : MonoBehaviour {
     public Transform CharactersRoot;
 
     private List<CharacterAI> _characters;
+    
 
     // Use this for initialization
     void Start () {
@@ -17,7 +18,6 @@ public class Planet : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //transform.Rotate(0, Time.deltaTime * 80, 0);
     }
 
     public void AddCharacter(CharacterAI character)
