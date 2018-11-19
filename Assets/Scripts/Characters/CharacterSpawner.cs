@@ -39,6 +39,8 @@ public class CharacterSpawner : MonoBehaviour {
             Debug.Log("Trop de personnages par rapport au nombre de combinaisons générées");
         }
 
+        Planet.SetNbCharacter(Nb);
+
         var points = PointsOnSphere(Nb);
         for (int i = 0; i < Nb; i++)
         {
@@ -61,9 +63,11 @@ public class CharacterSpawner : MonoBehaviour {
 
             GenerateSkin(sScript);
 
-            Planet.AddCharacter(aiScript);
+            Planet.AddCharacter(aiScript, gravityScript);
         }
-	}
+
+        AliveCount.Value = Nb;
+    }
 	
 	// Update is called once per frame
 	void Update () {

@@ -12,6 +12,7 @@ public class GravityBody : MonoBehaviour {
 
     private Ray _ray;
     private RaycastHit _resultRaycast;
+    private bool _isGrounded;
 
     // Use this for initialization
     void Start () {
@@ -25,7 +26,7 @@ public class GravityBody : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update ()
+	public void UpdatePhysics ()
     {
         UpdateRay();
 
@@ -39,32 +40,22 @@ public class GravityBody : MonoBehaviour {
                 Rigidbody.velocity = Vector3.zero;
 
                 ApplyGravityOrientation();
+
+                _isGrounded = true;
             }
             else
             {
+                _isGrounded = false;
                 Rigidbody.isKinematic = false;
-                ApplyGravity();
             }
         }
-        else
+    }
+
+    public void UpdateGravity()
+    {
+        if(!_isGrounded)
         {
-            var hits = Physics.RaycastAll(_ray, 0.1f, LayerMask.GetMask("Planet")).ToList();
-
-            if (hits.Any())
-            {
-                var hit = hits.OrderBy(h => h.distance).First();
-                transform.position = hit.point;
-
-                Rigidbody.isKinematic = true;
-                Rigidbody.velocity = Vector3.zero;
-
-                ApplyGravityOrientation();
-            }
-            else
-            {
-                Rigidbody.isKinematic = false;
-                ApplyGravity();
-            }
+            ApplyGravity();
         }
     }
 

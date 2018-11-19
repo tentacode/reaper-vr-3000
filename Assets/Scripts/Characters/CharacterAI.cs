@@ -10,18 +10,21 @@ public class CharacterAI : MonoBehaviour {
     public Planet Planet;
     public Vector3 Target;
     public Rigidbody Rigidbody;
+    public float TimeBetweenCollisionCheck = 0.5f;
+    public float CurrentTimeBetweenCollisionCheck = 0f;
 
     private Ray _ray;
     private float _timer;
+    private int _layerMask;
 
     // Use this for initialization
     void Start () {
         _ray = new Ray();
-
+        _layerMask = LayerMask.GetMask("Obstacle");
     }
 	
 	// Update is called once per frame
-	public void Update() {
+	public void UpdateCollision() {
         _timer -= Time.deltaTime;
 
         if (_timer <= 0)
@@ -29,18 +32,29 @@ public class CharacterAI : MonoBehaviour {
             NewTarget();
         }
 
-        Move();
+        CurrentTimeBetweenCollisionCheck -= Time.deltaTime;
 
-        UpdateRay();
-
-
-        var hit = Physics.Raycast(_ray, 0.1f, LayerMask.GetMask("Obstacle"));
-
-        if (hit)
+        if(CurrentTimeBetweenCollisionCheck <= 0)
         {
-            transform.Rotate(0, 90, 0);
-        }
+            UpdateRay();
+
+            var hit = Physics.Raycast(_ray, 0.1f, _layerMask);
+
+            if (hit)
+            {
+                transform.Rotate(0, 90, 0);
+            }
+
+            CurrentTimeBetweenCollisionCheck = TimeBetweenCollisionCheck;
+        }             
     }
+
+    /*
+    private void FixedUpdate()
+    {
+        Move(Time.deltaTime);
+    }
+    */
 
     private void UpdateRay()
     {
@@ -53,30 +67,9 @@ public class CharacterAI : MonoBehaviour {
         }
     }
 
-    public void Move()
+    public void Move(float time)
     {
-        //Vector3 newPos = transform.localPosition;
-        //Vector3 travelDir = (Target - transform.localPosition).normalized;
-
-        //if (travelDir != Vector3.zero)
-        //{
-        //    transform.up = -(Vector3.zero - transform.localPosition).normalized;
-        //    transform.rotation = Quaternion.LookRotation(transform.TransformDirection(travelDir), transform.up);
-        //}
-
-        ////move forward by our speed
-        //newPos += transform.forward * (Time.fixedDeltaTime * Speed);
-
-        ////turning the position into a direction from the centre
-        ////newPos.Normalize();
-        ////newPos *= Planet.Rayon;
-
-        ////var previousPosition = transform.localPosition;
-        //transform.localPosition = newPos;
-
-        ////var movement = newPos - previousPosition;
-
-        var newPos = transform.position + transform.forward * Speed * Time.deltaTime;
+        var newPos = transform.position + transform.forward * Speed * time;
 
         Rigidbody.MovePosition(newPos);
     }
